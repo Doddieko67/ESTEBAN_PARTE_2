@@ -1,10 +1,37 @@
 ---
 import Snow from '../components/snow.astro'
-
+import Card from '../components/card.astro'
 ---
 <Snow/>
-<div>
+<section class ="presen" id="presentacion">
+    <h2>Presentaciones</h2>
 
-</div>
-<style>
-</style>
+    <div class="presentaciones" id="presentaciones">
+        <Card/>
+        <Card/>
+        <Card/>
+    </div>
+</section>
+    <style>
+       .presentaciones {
+    justify-items: center;
+    justify-content: center;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    max-width: 100vw;
+    z-index: 2;
+    position: relative;
+}
+.presen{
+ padding: 50px 20px;
+ text-align: center;
+}
+.presen h2 {
+ font-size: 7em;
+ margin-bottom: 40px;
+}
+
+    </style>

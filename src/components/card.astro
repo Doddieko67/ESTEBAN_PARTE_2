@@ -1,63 +1,57 @@
 ---
+interface Props {
+    title?: string,
+    presentation?: string
+}
+const {title="Default title", presentation="Default content"} = Astro.props;
 ---
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
-</head>
-<body>
-    
-    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-        <img src="https://via.placeholder.com/150" alt="Imagen de Ejemplo" class="card-image">
-        <div class="card-content">
-            <h1 class="card-title">Title</h1>
-            <p class="card-description">Este es un texto descriptivo para la tarjeta. Aquí puedes agregar una breve descripción del contenido de la tarjeta o información adicional que quieras compartir.</p>
-        </div>
+<div class="cuadrado">
+    <img src="fondo1.jpg" alt="Descripción de la imagen">
+    <h3>Title</h3>
+    <div class="texto">Hola a todos como estan espero que esten muyb ien e dia de hoy ehm no se que otra cosa escerbvir a 
+        respecto soo es toy cualquie cosa que se me vaya ocurriendo aa no se poquerque esto yahciendo esto pero sdeberia ser
+        much omas faicl asi de esta forma eatafacp orque pense ne esos de la anda eh m yan oimpoor ta solo oimporta las cosas en realisda porque lasp ersdonsas no
+        watafac proque salia eso de ka nada
     </div>
-    
-    
-    <style>
-        .card {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 300px;
-            margin: 16px auto; /* Centrado */
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .card-image {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        
-        .card-content {
-            padding: 16px;
-        }
-        
-        .card-title {
-            margin-top: 0;
-            margin-bottom: 8px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        
-        .card-description {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.5;
-        }
-        </style>
-    <script>
-        import AOS from "aos";
-        AOS.init();
-    </script>
+</div>
+<style>
+.cuadrado {
+ background: linear-gradient(135deg, #676768 0%, #1b1b1f 100%);
+ border-radius: 50px;
+ width: 650px;
+ overflow: hidden;
+ height: auto;
+ transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ position: relative;
+ z-index: 2;
+}
 
-</body>
-</html>
+.cuadrado img {
+ width: 100%;
+ height: 50%;
+ object-fit: cover;
+}
+
+.cuadrado .texto {
+ font-size: 35px;
+ padding: 1em;
+ padding-top: 0;
+ height: 50%;
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ color: white;
+}
+
+.cuadrado:hover {
+ transform: scale(0.95);
+ cursor: pointer;
+ box-shadow: 0 0 50px rgb(255, 247, 232);
+}
+
+h3 {
+ font-size: 3em;
+ color: white;
+ margin: 0;
+}
+ </style>
