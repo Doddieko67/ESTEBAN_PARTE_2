@@ -1,0 +1,49 @@
+---
+import Card from '../components/card.astro';
+import Header from '../components/header.astro';
+import Inicio from './inicio.astro'
+import Presentacion from './presentacion.astro';
+---
+<html lang="es">
+  <head>
+	<meta charset="UTF-8">
+    <title>Proyecto Aula</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+</head>
+  <body>
+	<Header/>
+	<div class="inicio">
+		<Inicio/>
+	</div>
+	<Presentacion/>
+	<style>
+		html{
+    scroll-behavior: smooth;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+		.cover{
+			width: 100lvw;
+			height: 100vh;
+			background: gray;
+		}
+		body{
+			margin: 0;
+		}
+		h1{
+			margin: 0;
+		}
+		.inicio{
+			z-index: 500;
+		}
+	</style>
+	<script>
+		import AOS from "aos";
+		AOS.init();
+	</script>
+  </body>
+</html>
