@@ -1,10 +1,9 @@
 ---
-import Card from '../components/card.astro';
 import Header from '../components/header.astro';
 import Inicio from './inicio.astro'
 import Piedepagina from './piedepagina.astro';
 import Presentacion from './presentacion.astro';
-Piedepagina
+import Grupo from './grupo.astro'
 ---
 <html lang="es">
   <head>
@@ -20,9 +19,16 @@ Piedepagina
 	<div class="inicio">
 		<Inicio/>
 	</div>
+	<div class="relleno">
+	</div>
 	<Presentacion/>
+	<Grupo/>
 	<Piedepagina/>
 	<style>
+		.inicio{
+			position: absolute;
+			z-index: 500;
+		}
 		html{
     scroll-behavior: smooth;
     font-family: "Teko", sans-serif;
@@ -40,8 +46,9 @@ Piedepagina
 		h1{
 			margin: 0;
 		}
-		.inicio{
-			z-index: 500;
+		.relleno{
+			height: 100vh;
+			width: auto;
 		}
 	</style>
 	<script>
