@@ -1,7 +1,7 @@
 ---
 
 ---
-<div class="main">
+<div class="main" data-aos="fade-right">
     
     <div class="container">
         <div class="intro-text">
@@ -21,6 +21,12 @@
                macOS, Linux u otros sistemas operativos.</p>
         </div>
         <div class="images">
+            <div class="videoContainer">
+                <video controls>
+                    <source src='/senia1.mp4' type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
             <img src="linux.jpg" alt="Imagen 1" class="image-left">
             <img src="windows.jpg" alt="Imagen 2" class="image-right">
             <img src="macos.jpg" alt="Imagen 3" class="image-left">
@@ -28,26 +34,31 @@
     </div>
 </div>
 
-<div class="main2">
+<div class="main2" data-aos="fade-up">
 
     <div class="container">
         <div class="intro-text">
             <button class="btn">¿QUE OFRECEMOS?</button>
             <div class="row left">
+                <div class="videoContainer2">
+
+                    <video controls>
+                        <source src='/senia2.mp4' type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
                 <div class="text">
                     <p>Soluciones Paso a Paso: Instrucciones claras y fáciles de seguir para resolver problemas frecuentes.</p>
                 </div>
+            </div>
+            <div class="row right">
                 <div class="image">
                     <img src="soluciones.jpeg">
                 </div>
-            </div>
-            <div class="row right">
                 <div class="text">
                     <p>Recursos Multimedia: Videos y presentaciones realizados por nuestro equipo, que explican y demuestran cómo abordar diferentes problemas.</p>
                 </div>
-                <div class="image">
-                    <img src="multimedia.jpg">
-                </div>
+                
             </div>
             <div class="row left">
                 <div class="text">
@@ -66,14 +77,21 @@
                 </div>
             </div>
         </div>
-       
+        
     </div>
-
+    
 </div>
 
-<div class="main3">
-
+<div class="main3" data-aos="slide-right">
+    
     <div class="background-section">
+        <div class="videoContainer2">
+        
+            <video controls>
+                <source src='/senia3.mp4' type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
         <div class="centered-text">
             
             <h1>Nuestro equipo está compuesto por estudiantes apasionados de la tecnología, guiados por nuestro tutor, 
@@ -87,7 +105,38 @@
 
 <style>
 
+.videoContainer {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+    align-items: center; /* Centra el video verticalmente */
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+.videoContainer2{
+    padding: 20px 0;
+    display: inline-block;
+    margin: 20px;
+}
+.videoContainer2 video{
+    display: inline-block;
+    z-index: 500;
+    width: 90%; /* Hace que el video ocupe el 90% del contenedor */
+    max-width: 300px; /* Asegura que el video no se vuelva demasiado grande */
+    height: auto; /* Mantiene la proporción del video */
+    border-radius: 10px;
+}
+.videoContainer video {
+    position: absolute;
+    z-index: 500;
+    width: 90%; /* Hace que el video ocupe el 90% del contenedor */
+    max-width: 300px; /* Asegura que el video no se vuelva demasiado grande */
+    height: auto; /* Mantiene la proporción del video */
+    border-radius: 10px;
 
+}
 
 .main1{
     margin: 0;
@@ -432,3 +481,7 @@
 
 
 </style>
+<script>
+    import AOS from 'aos';
+    AOS.init();
+</script>
