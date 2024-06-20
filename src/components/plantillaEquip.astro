@@ -11,8 +11,14 @@ interface Props {
     integrante5?:string,
     integrante6?:string,
     integrante7?:string,
+    verdad?:boolean
 }
-const { numEquipo, title, integrante1, integrante2, integrante3, integrante4, integrante5, integrante6,integrante7} = Astro.props;
+let displaysito = "";
+const { numEquipo, title, integrante1, integrante2, integrante3, integrante4, integrante5, verdad=false, integrante6,integrante7} = Astro.props;
+
+if(verdad){
+    displaysito = "none";
+}
 ---
 
 <html>
@@ -46,12 +52,14 @@ const { numEquipo, title, integrante1, integrante2, integrante3, integrante4, in
     <div class="row fullScreen">
         <iframe src={`/Equipo ${numEquipo} - Presentacion.pdf`} style="width:90%; height:90%;"></iframe>
     </div>
+    <div class="paCerrar" style=`display: ${displaysito}`>
     <h1>Video</h1>
     <div class="row videoContainer">
         <video controls>
             <source src={`/equipo${numEquipo}.mp4`} type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
+    </div>
     </div>
 </body>
 <style>
