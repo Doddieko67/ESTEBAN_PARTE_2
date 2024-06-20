@@ -5,7 +5,7 @@ import Piedepagina from './piedepagina.astro';
 import Grupo from './grupo.astro'
 import Introduccion from './introduccion.astro';
 import PreXteam from './preXteam.astro';
-
+import Snow from '../components/snow.astro';
 
 ---
 <html lang="es">
@@ -19,11 +19,12 @@ import PreXteam from './preXteam.astro';
 </head>
   <body>
 	<Header/>
-	<div class="inicio">
+	<div class="inicio" id="inicio">
 		<Inicio/>
 	</div>
 	<div class="relleno">
 	</div>
+	<Snow/>
 	<Introduccion/>
 	<PreXteam/>
 	<Grupo/>
@@ -55,6 +56,7 @@ import PreXteam from './preXteam.astro';
 			height: 100vh;
 			width: auto;
 		}
+}
 	</style>
 	<script>
 		import AOS from "aos";
