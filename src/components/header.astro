@@ -16,7 +16,7 @@ for(let i = 1; i <= 10; i++){
             </li>
                 
             <li>
-                <a href="#home">Conocenos</a>
+                <a id="Conocenos">Conocenos</a>
                 <div  class="column">
                     <ul class="menu-vertical">
                         <li><a href="#">Tecnico en Computacion</a></li>
@@ -25,7 +25,7 @@ for(let i = 1; i <= 10; i++){
                     </ul>
                 </div>
             </li>
-            <li><a href="#home">Presentaciones y videos</a>
+            <li><a href="#Presentaciones">Presentaciones y videos</a>
                 <div class="column">
                 <ul class="menu-vertical">
                     <ul>
@@ -36,11 +36,11 @@ for(let i = 1; i <= 10; i++){
                 </ul>
                 </div>
             </li>
-            <li class="column"><a href="#services">Fotos</a>
+            <li class="column"><a href="#fotos">Fotos</a>
                 
             </li>
             <li>
-                <a href="#contact">Contacto</a>
+                <a id="contact">Contacto</a>
                     <div class="column">
                     <ul class="menu-vertical">
                         <li><a href="curso-html.html">Instituto Politecnico Nacional</a></li>
@@ -193,7 +193,12 @@ nav ul li a:hover{
     .menu-horizontal{
         align-items: flex-start;
         flex-wrap: wrap;
-
+    }
+    #contact{
+        display: none;
+    }
+    #Conocenos{
+        display: none;
     }
     }
     @media (max-width: 1600px) {
